@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+<h1 class="header">Flask - урок 1</h1>
+<div class="container">
+
+    <div class="task">
+        <h2>Задание 1</h2>
+        <p>
+            Напишите простое веб-приложение на Flask, которое будет выводить на экран текст "Hello, World!".
+        </p>
+        <div class="link">
+            <a href="{{ url_for('task1_index') }}">Hello, World!</a>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задание 2</h2>
+        <p>
+            Дорабатываем задачу 1. <br>
+            Добавьте две дополнительные страницы в ваше веб-приложение:
+        </p>
+        <div class="link">
+            <ul>
+                <li><a href="{{ url_for('task2_about') }}">About me</a></li>
+                <li><a href="{{ url_for('task2_contact') }}">My contacts</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задание 3</h2>
+        <p>
+            Написать функцию, которая будет принимать на вход два
+            числа и выводить на экран их сумму.
+        </p>
+        <div class="link">
+            <form action="{{ url_for('redirect_url') }}" method="post">
+                <label>x</label> <br>
+                <input type="text" name="x"> <br>
+                <label>y</label> <br>
+                <input type="text" name="y"> <br><br>
+                <button type="submit">Суммировать</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задание 4</h2>
+        <p>
+            Написать функцию, которая будет принимать на вход строку и
+            выводить на экран ее длину.
+        </p>
+        <div class="link">
+            <form method="post" action="{{ url_for('redirect_url') }}">
+                <label>Введите строку</label> <br>
+                <input type="text" name="text"> <br><br>
+                <button type="submit">Получить длинну</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задание 5</h2>
+        <p>
+            Написать функцию, которая будет выводить на экран HTML
+            страницу с заголовком "Моя первая HTML страница" и
+            абзацем "Привет, мир!".
+        </p>
+        <div class="link">
+            <a href="{{ url_for('task5_index') }}">Task 5</a>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задание 6</h2>
+        <p>
+            Написать функцию, которая будет выводить на экран HTML
+            страницу с таблицей, содержащей информацию о студентах. <br>
+            Таблица должна содержать следующие поля: "Имя",
+            "Фамилия", "Возраст", "Средний балл". <br>
+            Данные о студентах должны быть переданы в шаблон через
+            контекст.
+        </p>
+        <div class="link">
+            <a href="{{ url_for('task6_people') }}">Task 6</a>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задание 7</h2>
+        <p>
+            Написать функцию, которая будет выводить на экран HTML
+            страницу с блоками новостей.
+            <br>
+            Каждый блок должен содержать заголовок новости,
+            краткое описание и дату публикации.
+            <br>
+            Данные о новостях должны быть переданы в шаблон через
+            контекст.
+        </p>
+        <div class="link">
+            <a href="{{ url_for('task7_index') }}">Task 7</a>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задание 8</h2>
+        <p>
+            Создать базовый шаблон для всего сайта, содержащий
+            общие элементы дизайна (шапка, меню, подвал), и
+            дочерние шаблоны для каждой отдельной страницы.
+            <br>
+            Например, создать страницу "О нас" и "Контакты",
+            используя базовый шаблон.
+        </p>
+        <div class="link">
+            <ul>
+                <li><a href="{{ url_for('task8_contacts') }}">My contacts</a></li>
+                <li><a href="{{ url_for('task8_about_me') }}">About me</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="task">
+        <h2>Задание 9</h2>
+        <p>
+            Создать базовый шаблон для интернет-магазина,
+            содержащий общие элементы дизайна (шапка, меню,
+            подвал), и дочерние шаблоны для страниц категорий
+            товаров и отдельных товаров.
+            <br>
+            Например, создать страницы "Одежда", "Обувь" и "Куртка",
+            используя базовый шаблон.
+        </p>
+        <div class="link">
+            <a href="{{ url_for('task9_home') }}">Task 9</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

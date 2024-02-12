@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animal news</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/task7_style.css') }}">
+</head>
+<body>
+<h1>Animal news</h1>
+<div class="news">
+    {% for n in news %}
+    <h3 class="news_title">{{ n[0] }}</h3>
+    <p class="news_text">{{ n[1] }}</p>
+    <p class="news_date">{{ n[2] }}</p>
+    {% endfor %}
+</div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'task9/base.html' %}
+
+{% block container %}
+<div class="grid-container">
+    <a href="{{ url_for('task9_flowers') }}">
+        <div class="grid-item">
+            Flowers
+        </div>
+    </a>
+    <a href="{{ url_for('task9_toys') }}">
+        <div class="grid-item">
+            Toys
+        </div>
+    </a>
+    <a href="{{ url_for('task9_teas') }}">
+    <div class="grid-item">
+        Tea
+    </div>
+</a>
+</div>
+{% endblock %}

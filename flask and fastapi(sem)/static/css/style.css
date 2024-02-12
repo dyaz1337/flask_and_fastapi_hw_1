@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+h1.header {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.task {
+    background-color: #333;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: calc(33.33% - 20px); /* Adjust width to fit maximum of 3 items per row */
+    margin-bottom: 20px; /* Add margin to separate rows */
+}
+
+.task h2 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #fff;
+}
+
+.task p {
+    color: #ccc;
+    line-height: 1.5;
+}
+
+.task .link {
+    margin-top: 20px;
+}
+
+.task .link a {
+    color: #00cccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.task .link ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task .link ul li {
+    margin-top: 10px;
+}
+
+.task .link ul li a {
+    color: #00cccc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.task .link button {
+    background-color: #00cccc;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.task .link button:hover {
+    background-color: #008b8b;
+}

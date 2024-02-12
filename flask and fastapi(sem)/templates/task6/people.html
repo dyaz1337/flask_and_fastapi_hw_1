@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>People</title>
+</head>
+<body>
+  <table>
+    <tr>
+      <th>Имя</th>
+      <th>Фамилия</th>
+      <th>Возраст</th>
+    </tr>
+    {% for name in names %}
+    <tr>
+      <td>{{ name['name']|capitalize }}</td>
+      <td>{{ name['Lastname']|capitalize }}</td>
+      <td>{{ name['age'] }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>

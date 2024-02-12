@@ -1,0 +1,13 @@
+{% extends 'task9/base_product.html' %}
+
+{% block title %}{{ title }}{% endblock %}
+{% block product %}{{ title }}{% endblock %}
+{% block content %}
+{% for flower in flowers %}
+<div class="product">
+    <img src="{{ url_for('static', filename=flower.img_link) }}" alt="flower">
+    <h4>{{ flower.name }}</h4>
+    <div class="price">EUR {{ flower.price }}</div>
+</div>
+{% endfor %}
+{% endblock %}

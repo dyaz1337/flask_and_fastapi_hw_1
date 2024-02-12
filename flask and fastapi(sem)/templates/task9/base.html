@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Website{% endblock %}</title>
+    {% block css %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/task9_style.css') }}">
+    {% endblock %}
+</head>
+<body>
+<header>
+    {% block header %}
+    <h1>Gift Shop</h1>
+    {% endblock %}
+</header>
+
+<div class="container">
+    <aside>
+        {% block menu %}
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('task9_home') }}">Home</a></li>
+                <li><a href="{{ url_for('task9_about') }}">About</a></li>
+                <li><a href="{{ url_for('task9_contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+        {% endblock %}
+    </aside>
+
+    <main>
+        {% block container %}
+
+        {% endblock %}
+    </main>
+</div>
+
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+</body>
+</html>

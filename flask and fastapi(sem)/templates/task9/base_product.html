@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Products{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/task9_products.css') }}">
+</head>
+<body>
+<h1>{% block product %}Products{% endblock %}</h1>
+<div class="content">
+    {% block content %}
+
+    {% endblock %}
+</div>
+</body>
+</html>
